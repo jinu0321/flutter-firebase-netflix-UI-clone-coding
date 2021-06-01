@@ -11,7 +11,7 @@ class Bottom extends StatelessWidget {
             labelColor: Colors.white,
             unselectedLabelColor: Colors.white60,
             indicatorColor: Colors. transparent,
-            tabs: <Widget>[
+            tabs: <Tab>[
               Tab(
                 icon: Icon(Icons.home, size: 18),
                 child: Text('홈', style: TextStyle(fontSize: 9)),

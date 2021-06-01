@@ -4,8 +4,7 @@ import 'package:netflix_clone_coding/model/model_movie.dart';
 
 class CarouselImage extends StatefulWidget {
   final List<Movie> movies;
-
-  CarouselImage({required this.movies});
+  CarouselImage(this.movies);
 
   _CarouselImageState createState() => _CarouselImageState();
 }
