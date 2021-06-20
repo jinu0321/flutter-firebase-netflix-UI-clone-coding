@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_clone_coding/screen/home_screen.dart';
 import 'package:netflix_clone_coding/screen/more_screen.dart';
@@ -12,7 +13,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
+
   late TabController controller;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,11 +36,8 @@ class _MyAppState extends State<MyApp> {
                     Container(child: Center(child: Text('search'))),
                     Container(child: Center(child: Text('save'))),
                     MoreScreen()
-                  ]
-              ),
+                  ]),
               bottomNavigationBar: Bottom(),
-            )
-        )
-    );
+            )));
   }
 }

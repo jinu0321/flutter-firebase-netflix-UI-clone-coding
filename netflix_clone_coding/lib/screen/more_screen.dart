@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:netflix_clone_coding/data_movie.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MoreScreen extends StatelessWidget {
@@ -62,6 +63,19 @@ class MoreScreen extends StatelessWidget {
                 ],
               )
             )
+          )
+        ),
+        Container(
+          child: TextButton(
+            child: Text(
+                '출력하기',
+                style: TextStyle(
+                  backgroundColor: Colors.white,
+                  color: Colors.red,
+                  fontSize: 20,
+                ),
+            ),
+            onPressed: () { print(d); },
           )
         )
       ],
